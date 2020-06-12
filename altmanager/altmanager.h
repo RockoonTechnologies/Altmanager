@@ -12,5 +12,8 @@ void start(uint8_t address);
 void average(int times);
 int getAlt();
 int rawAlt();
+int rawPres();
+int rawTemp();
+bool altwork();
 
 #endif

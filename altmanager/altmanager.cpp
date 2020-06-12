@@ -11,6 +11,11 @@ float altitude2;
 float altitude3;
 int altitude4;
 
+float pressure;
+float temp;
+
+bool working = false;
+
 float basealtitude;
 float currentalt;
 
@@ -28,7 +33,7 @@ void start(uint8_t address) {
 		 Serial.println(F("Could not find a valid BMP280 sensor, check wiring!"));
 		 while (1);
 	}
-	
+	working = true;
 }
 
 
@@ -56,4 +61,27 @@ int rawAlt() {
 	Serial.print("rawalt Altitude : ");
 	Serial.print(altitude3);
 	return altitude3;
+}
+
+int rawPres() {
+	pressure = bmp.readPressure()
+	Serial.print("rawpressure : ");
+	Serial.print(pressure);
+	return pressure;
+}
+
+int rawTemp() {
+	temp = bmp.readTemperature()
+	Serial.print("rawtemp : ");
+	Serial.print(temp);
+	return temp;
+}
+
+bool altwork() {
+	if (working == true) {
+		return true;
+	}
+	if (working == false) {
+		return false;
+	}
 }
