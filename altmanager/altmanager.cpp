@@ -64,17 +64,17 @@ int rawAlt() {
 }
 
 int rawPres() {
-	pressure = bmp.readPressure();
+	pressure1 = bmp.readPressure();
 	Serial.print("rawpressure : ");
-	Serial.print(pressure);
-	return pressure;
+	Serial.print(pressure1);
+	return pressure1;
 }
 
 int rawTemp() {
-	temp = bmp.readTemperature();
+	tempy = bmp.readTemperature();
 	Serial.print("rawtemp : ");
-	Serial.print(temp);
-	return temp;
+	Serial.print(tempy);
+	return tempy;
 }
 
 bool altwork() {
