@@ -14,7 +14,7 @@ int altitude4;
 float pressure1;
 float tempe
 
-boolean working = false;
+//bool work = false;
 
 float basealtitude;
 float currentalt;
@@ -33,7 +33,7 @@ void start(uint8_t address) {
 		 Serial.println(F("Could not find a valid BMP280 sensor, check wiring!"));
 		 while (1);
 	}
-	working = true;
+	
 }
 
 
@@ -78,10 +78,5 @@ int rawTemp() {
 }
 
 bool altwork() {
-	if (working == true) {
-		return true;
-	}
-	if (working == false) {
-		return false;
-	}
+	return true;
 }
