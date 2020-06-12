@@ -14,7 +14,9 @@ The lib has three main operators:
 - average();
 - getAlt();
 
-```start();``` is located in the setup function of your code, and it creates a bmp instance meaning that creating your own instance and declaring pins is not needed and may cause errors.
+```start("");``` is located in the setup function of your code, and it creates a bmp instance meaning that creating your own instance and declaring pins is not needed and may cause errors. Leaving ```start("");``` blank will default it to the default I2C address, adding a string will make it attempt to connect to that address. 
+
+EX: ```start("0x76");``` will connect to ```0x76``` address.
 
 ```average();``` gets the average altitude and sets that as the base altitude or zero, this means whenever a ```getAlt();``` takes place,
 it is relative to the latest ```average();``` outcome. This only needs to be run once but can be ran multiple times. **Usage** ```average();``` takes a integer, and that is the amount of times it runs.
