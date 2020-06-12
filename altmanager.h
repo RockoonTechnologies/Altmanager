@@ -8,9 +8,9 @@
 #include <SPI.h>
 #include <Adafruit_BMP280.h>
 
-void start();
+void start(uint8_t address);
 void average(int times);
 int getAlt();
-
+int rawAlt();
 
 #endif

@@ -8,6 +8,8 @@
 
 float altitude1;
 float altitude2;
+float altitude3;
+
 float basealtitude;
 float currentalt;
 
@@ -17,19 +19,24 @@ float currentalt;
 #define BMP_CS   (10)
 Adafruit_BMP280 bmp;
 
-void start() {
+void start(uint8_t address) {
 	
-	if (!bmp.begin()) {
-		Serial.println(F("Could not find a valid BMP280 sensor, check wiring!"));
-		while (1);
+	// Prepare the character array (the buffer) 
+	
+	if (!bmp.begin(address)) {
+		 Serial.println(F("Could not find a valid BMP280 sensor, check wiring!"));
+		 while (1);
 	}
+	
 }
+
 
 void average(int times) {
 	
 	int i;
 	while (i < times) {
 		altitude1 = altitude1 + bmp.readAltitude(1013.25);
+		i++
 	}
 	basealtitude = altitude1 / times;
 	Serial.print(basealtitude);
@@ -42,3 +49,8 @@ int getAlt() {
 	return currentalt;
 }
 
+int rawAlt() {
+	altitude3 = bmp.readAltitude(1013.25);
+	
+	return altitude3;
+}
