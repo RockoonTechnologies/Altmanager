@@ -1,5 +1,13 @@
 # Altmanager
-a lib that easily helps with BMP280 operation
+A lib that easily helps with BMP280 operation in terms of rockets.
+
+#### Features:
+- Set custom base altitude 
+- Raw measurements
+- Does the sensor setup for you!
+- Easy to use
+- Polling (for rockets)
+
 
 ### Special thanks to Om0r (https://github.com/Om0r)
 
