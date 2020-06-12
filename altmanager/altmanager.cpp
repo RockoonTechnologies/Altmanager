@@ -39,18 +39,21 @@ void average(int times) {
 		i++;
 	}
 	basealtitude = altitude1 / times;
+	Serial.print("Base Altitude:");
 	Serial.print(basealtitude);
 }
 
 int getAlt() {
 	altitude2 = bmp.readAltitude(1013.25);
 	currentalt = altitude2 - basealtitude;
+	Serial.print("getAlt Altitude : ");
 	Serial.print(currentalt);
 	return currentalt;
 }
 
 int rawAlt() {
 	altitude3 = bmp.readAltitude(1013.25);
-	
+	Serial.print("rawalt Altitude : ");
+	Serial.print(altitude3);
 	return altitude3;
 }
