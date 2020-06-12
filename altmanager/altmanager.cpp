@@ -14,7 +14,7 @@ int altitude4;
 float pressure1;
 float tempe
 
-bool working = false;
+boolean working = false;
 
 float basealtitude;
 float currentalt;
