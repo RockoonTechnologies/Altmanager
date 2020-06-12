@@ -9,7 +9,7 @@
 #include <Adafruit_BMP280.h>
 
 void start(uint8_t address);
-void average(int times);
+void average(float times);
 int getAlt();
 int rawAlt();
 

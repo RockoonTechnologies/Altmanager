@@ -9,6 +9,7 @@
 float altitude1;
 float altitude2;
 float altitude3;
+float altitude4;
 
 float basealtitude;
 float currentalt;
@@ -32,11 +33,10 @@ void start(uint8_t address) {
 
 
 void average(int times) {
+
 	
-	int i;
-	while (i < times) {
+	for (int i = 0; i < times; i++) {
 		altitude1 = altitude1 + bmp.readAltitude(1013.25);
-		i++;
 	}
 	basealtitude = altitude1 / times;
 	Serial.print("Base Altitude:");
