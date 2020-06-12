@@ -11,8 +11,8 @@ float altitude2;
 float altitude3;
 int altitude4;
 
-float pressure1;
-float tempe
+float t;
+float p;
 
 //bool work = false;
 
@@ -64,17 +64,17 @@ int rawAlt() {
 }
 
 int rawPres() {
-	pressure1 = bmp.readPressure();
+	p = bmp.readPressure();
 	Serial.print("rawpressure : ");
-	Serial.print(pressure1);
-	return pressure1;
+	Serial.print(p);
+	return p;
 }
 
 int rawTemp() {
-	tempe = bmp.readTemperature();
+	t = bmp.readTemperature();
 	Serial.print("rawtemp : ");
-	Serial.print(tempe);
-	return tempe;
+	Serial.print(t);
+	return t;
 }
 
 bool altwork() {
