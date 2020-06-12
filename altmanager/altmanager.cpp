@@ -46,6 +46,7 @@ void average(int times) {
 	}
 	basealtitude = altitude1 / times;
 	Serial.print("Base Altitude:");
+	Serial.print('\n');
 	Serial.print(basealtitude);
 }
 
