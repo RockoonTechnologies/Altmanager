@@ -42,6 +42,7 @@ void average(int times) {
 	
 	for (int i = 0; i < times; i++) {
 		altitude1 = altitude1 + bmp.readAltitude(1013.25);
+		delay(10);
 	}
 	basealtitude = altitude1 / times;
 	Serial.print("Base Altitude:");
@@ -52,6 +53,7 @@ int getAlt() {
 	altitude2 = bmp.readAltitude(1013.25);
 	currentalt = altitude2 - basealtitude;
 	Serial.print("getAlt Altitude : ");
+	Serial.print('\n');
 	Serial.print(currentalt);
 	return currentalt;
 }
@@ -59,6 +61,7 @@ int getAlt() {
 int rawAlt() {
 	altitude3 = bmp.readAltitude(1013.25);
 	Serial.print("rawalt Altitude : ");
+	Serial.print('\n');
 	Serial.print(altitude3);
 	return altitude3;
 }
@@ -73,6 +76,7 @@ int rawPres() {
 int rawTemp() {
 	t = bmp.readTemperature();
 	Serial.print("rawtemp : ");
+	Serial.print('\n');
 	Serial.print(t);
 	return t;
 }
