@@ -9,20 +9,36 @@
 float altitude1;
 float altitude2;
 float basealtitude;
+float currentalt;
+
+#define BMP_SCK  (13)
+#define BMP_MISO (12)
+#define BMP_MOSI (11)
+#define BMP_CS   (10)
+Adafruit_BMP280 bmp;
+
+void start() {
+	
+	if (!bmp.begin()) {
+		Serial.println(F("Could not find a valid BMP280 sensor, check wiring!"));
+		while (1);
+	}
+}
 
 void average(int times) {
+	
 	int i;
 	while (i < times) {
-		altitude1 = altitude1 + bmp.readAltitude(SEALEVEL);
+		altitude1 = altitude1 + bmp.readAltitude(1013.25);
 	}
 	basealtitude = altitude1 / times;
-	Serial.print("basealt" + basealtitude);
+	Serial.print(basealtitude);
 }
 
 int getAlt() {
-	altitude2 = bmp.readAltitude(SEALEVEL);
+	altitude2 = bmp.readAltitude(1013.25);
 	currentalt = altitude2 - basealtitude;
-	Serial.print("current alt" + currentalt);
+	Serial.print(currentalt);
 	return currentalt;
 }
 
