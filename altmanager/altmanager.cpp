@@ -9,7 +9,7 @@
 float altitude1;
 float altitude2;
 float altitude3;
-float altitude4;
+int altitude4;
 
 float basealtitude;
 float currentalt;
