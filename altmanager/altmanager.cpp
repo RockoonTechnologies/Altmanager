@@ -36,7 +36,7 @@ void average(int times) {
 	int i;
 	while (i < times) {
 		altitude1 = altitude1 + bmp.readAltitude(1013.25);
-		i++
+		i++;
 	}
 	basealtitude = altitude1 / times;
 	Serial.print(basealtitude);
