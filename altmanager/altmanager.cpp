@@ -64,14 +64,14 @@ int rawAlt() {
 }
 
 int rawPres() {
-	pressure = bmp.readPressure()
+	pressure = bmp.readPressure();
 	Serial.print("rawpressure : ");
 	Serial.print(pressure);
 	return pressure;
 }
 
 int rawTemp() {
-	temp = bmp.readTemperature()
+	temp = bmp.readTemperature();
 	Serial.print("rawtemp : ");
 	Serial.print(temp);
 	return temp;
