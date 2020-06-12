@@ -11,8 +11,8 @@ float altitude2;
 float altitude3;
 int altitude4;
 
-float pressure;
-float temp;
+float pressure1;
+float tempy;
 
 bool working = false;
 
