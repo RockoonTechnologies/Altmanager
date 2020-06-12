@@ -12,7 +12,7 @@ float altitude3;
 int altitude4;
 
 float pressure1;
-float tempy;
+float tempe
 
 bool working = false;
 
@@ -71,10 +71,10 @@ int rawPres() {
 }
 
 int rawTemp() {
-	tempy = bmp.readTemperature();
+	tempe = bmp.readTemperature();
 	Serial.print("rawtemp : ");
-	Serial.print(tempy);
-	return tempy;
+	Serial.print(tempe);
+	return tempe;
 }
 
 bool altwork() {
