@@ -31,6 +31,15 @@ EX: ```average(5);``` - will run 5 times, the more it runs the higher accuaracy,
 
 ```rawAlt();``` gets altitude in respect to Sea Level, not the from ```average```
 
+```rawPres();``` gets raw pressure
+
+```rawTemp();``` gets raw tempreture
+
+```altwork();``` returns true if sensor working, vice versa; good for polling
+
+Ex: ``` isworking = altwork();```
+
+
 ## Demo
 
 There is a demo file, its super basic and just shows how things are used. Consult that for examples and usage.
