@@ -1,6 +1,10 @@
 # Altmanager
 a lib that easily helps with BMP280 operation
 
+### Special thanks to Om0r (https://github.com/Om0r)
+
+Site: https://www.objectivespace.org/
+
 # Installation
 
 Install this lib via the .zip file
