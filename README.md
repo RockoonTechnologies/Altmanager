@@ -9,9 +9,6 @@ A lib that easily helps with BMP280 operation in terms of rockets.
 - Polling (for rockets)
 
 
-### Special thanks to Om0r (https://github.com/Om0r)
-
-Site: https://www.objectivespace.org/
 
 # Installation
 
